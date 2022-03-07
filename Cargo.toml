@@ -1,0 +1,23 @@
+[package]
+name = "xous-tts-backend"
+authors = ["bunnie <bunnie@kosagi.com>"]
+description = "IPC API for Xous text to speech backend executables"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/betrusted-io/tts-backend"
+homepage = "https://betrusted.io/"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+xous = "0.9.7"
+xous-ipc = "0.9.7"
+xous-names = "0.9.7"
+log = "0.4.14"
+num-derive = {version = "0.3.3", default-features = false}
+num-traits = {version = "0.2.14", default-features = false}
+rkyv = {version = "0.4.3", default-features = false, features = ["const_generics"]}
+
+[features]
+default = []
