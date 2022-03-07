@@ -12,6 +12,11 @@ pub enum TtsBeOpcode {
 }
 
 #[derive(Debug, Copy, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
+pub enum TtsBeControl {
+    End,
+}
+
+#[derive(Debug, Copy, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
 pub struct TtsBackendMsg {
     pub text: xous_ipc::String::<2048>,
 }
@@ -30,4 +35,5 @@ pub struct TtsBackendData {
     pub data: [u16; MAX_WAV_BUF_SAMPLES],
     /// the actual length in the buffer
     pub len: u32,
+    pub control: Option<TtsBeControl>,
 }
