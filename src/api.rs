@@ -32,6 +32,7 @@ pub struct TtsBackendConfig {
     pub sid: [u32; 4],
     pub op: u32,
     pub samples_per_cb: Option<u32>,
+    pub words_per_minute: Option<u32>,
 }
 
 /// Data returned by the backend to the `dedicated_sid`, routed to the opcode

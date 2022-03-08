@@ -39,11 +39,13 @@ impl TtsBackend {
         dedicated_sid: [u32; 4],
         opcode: u32,
         samples_per_cb: Option<u32>,
+        words_per_minute: Option<u32>,
     ) -> Result<(), xous::Error> {
         let msg = TtsBackendConfig {
             sid: dedicated_sid,
             op: opcode,
             samples_per_cb,
+            words_per_minute,
         };
         let buf = Buffer::into_buf(msg).or(Err(xous::Error::InternalError))?;
         buf.lend(self.conn, TtsBeOpcode::RegisterCb.to_u32().unwrap())
