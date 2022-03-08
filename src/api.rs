@@ -1,4 +1,4 @@
-pub const SERVER_NAME_TTS_EXEC: &str     = "_Text To Speech Executable_ / (external C program)";
+pub const SERVER_NAME_TTS_EXEC: &str = "_Text To Speech Executable_ / (external C program)";
 pub const MAX_WAV_BUF_SAMPLES: usize = 1024;
 
 /// Back end opcode table
@@ -23,7 +23,7 @@ pub enum TtsBeControl {
 /// limited to 2048 characters in length.
 #[derive(Debug, Copy, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
 pub struct TtsBackendMsg {
-    pub text: xous_ipc::String::<2048>,
+    pub text: xous_ipc::String<2048>,
 }
 
 /// Configuration data for the backend
