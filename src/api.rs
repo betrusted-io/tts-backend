@@ -13,6 +13,7 @@ pub enum TtsBeOpcode {
 
 #[derive(Debug, Copy, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
 pub enum TtsBeControl {
+    Abort,
     End,
 }
 
