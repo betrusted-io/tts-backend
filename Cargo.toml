@@ -2,7 +2,7 @@
 name = "xous-tts-backend"
 authors = ["bunnie <bunnie@kosagi.com>"]
 description = "IPC API for Xous text to speech backend executables"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://github.com/betrusted-io/tts-backend"
@@ -21,3 +21,7 @@ rkyv = {version = "0.4.3", default-features = false, features = ["const_generics
 
 [features]
 default = []
+
+# Revision history
+# 0.1.0 - initial publication
+# 0.1.1 - add documentation
