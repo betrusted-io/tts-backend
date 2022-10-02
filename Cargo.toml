@@ -2,7 +2,7 @@
 name = "xous-tts-backend"
 authors = ["bunnie <bunnie@kosagi.com>"]
 description = "IPC API for Xous text to speech backend executables"
-version = "0.1.3"
+version = "0.1.4"
 edition = "2021"
 license = "Apache-2.0"
 repository = "https://github.com/betrusted-io/tts-backend"
@@ -13,7 +13,7 @@ homepage = "https://betrusted.io/"
 [dependencies]
 xous = "0.9.7"
 xous-ipc = "0.9.7"
-xous-names = "0.9.7"
+xous-names = {version = "0.9.3", package = "xous-api-names"}
 log = "0.4.14"
 num-derive = {version = "0.3.3", default-features = false}
 num-traits = {version = "0.2.14", default-features = false}
@@ -27,3 +27,4 @@ default = []
 # 0.1.1 - add documentation
 # 0.1.2 - fix formatting and README
 # 0.1.3 - add words per minute configuration knob
+# 0.1.4 - update xous-names ref
