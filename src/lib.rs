@@ -57,7 +57,7 @@ impl TtsBackend {
     /// The string is a stanard Rust `utf-8` format string, and currently the assumed langauge is English.
     pub fn tts_simple(&self, text: &str) -> Result<(), xous::Error> {
         let msg = TtsBackendMsg {
-            text: xous_ipc::String::from_str(text),
+            text: String::from(text),
         };
         let buf = Buffer::into_buf(msg).or(Err(xous::Error::InternalError))?;
         buf.lend(self.conn, TtsBeOpcode::StrToWav.to_u32().unwrap())

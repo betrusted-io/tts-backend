@@ -21,9 +21,9 @@ pub enum TtsBeControl {
 
 /// Messages to the backend. Currently, just the text string can be sent, and it is
 /// limited to 2048 characters in length.
-#[derive(Debug, Copy, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
+#[derive(Debug, Clone, rkyv::Archive, rkyv::Serialize, rkyv::Deserialize)]
 pub struct TtsBackendMsg {
-    pub text: xous_ipc::String<2048>,
+    pub text: String,
 }
 
 /// Configuration data for the backend
